@@ -26,6 +26,11 @@ var txt = data.toString('utf-8');
 var buf = new Buffer(txt, 'utf-8');
 
 // 若要同步读文件,无回调函数
-var data = readFileSync('oneAddOne.txt', 'utf-8');
+try{
+    var data = readFileSync('oneAddOne.txt', 'utf-8');
+    // Deal With data
+} catch(error){
+    // Deal With error
+}
 
 //写文件用writeFile()
